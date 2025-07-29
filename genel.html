@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google</title>
+    <style>
+        header {
+            padding: 10px 10px 0px 0px;
+
+        }
+
+        header .sol a {
+            display: inline-block;
+            padding-left: 15px;
+            color: #000;
+            opacity: 0.75;
+            text-decoration: none;
+        }
+
+        header .sag a {
+            color: rgba(0, 0, 0, 0.87);
+            text-decoration: none;
+            float: right;
+            padding-right: 10px;
+        }
+
+        footer .fb-sag a,
+        footer .fb-sol a {
+            color: rgba(114, 114, 114, 0.87);
+            text-decoration: none;
+            font-size: 16px;
+            float: right;
+            margin-right: 20px;
+            margin-top: 6px;
+        }
+
+        footer .fb-sol a {
+
+            float: left;
+
+        }
+
+        footer .fb-sag {
+
+            margin-right: 30px;
+
+        }
+
+        footer .fb-sol {
+
+            margin-left: 30px;
+
+        }
+
+        header .sol a:hover {
+            opacity: .85;
+        }
+
+        header a:hover,
+        footer .fb-sag a:hover,
+        footer .fb-sol a:hover {
+
+            text-decoration: underline;
+        }
+
+        .menu {
+            background-image: url("/img/gogle.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 30px;
+            height: 30px;
+            margin-top: -13px;
+            opacity: 0.60;
+        }
+
+        .menu:hover {
+
+            opacity: 0.85;
+        }
+
+        .sign-wrap {
+            display: inline-block;
+            float: right;
+            margin-top: -10px;
+        }
+
+        .sign {
+
+            position: relative;
+        }
+
+        .sign-but {
+
+            border: 1px solid #4285f4;
+            font-weight: bold;
+            outline: none;
+            background: #4285f4;
+            padding: 10px;
+            cursor: default;
+            text-decoration: none;
+            color: #fff !important;
+            line-height: 0.9;
+        }
+
+        .sign-but:hover {
+            text-decoration: none;
+        }
+
+        .main {
+            padding-top: 160px;
+            text-align: center;
+        }
+
+        form {
+            overflow: visible;
+        }
+
+        .search-wrap {
+            background: #fff;
+            display: flex;
+            width: 582px;
+            border: 1px solid #dfe1e5;
+            box-shadow: none;
+            border-radius: 24px;
+            z-index: 3;
+            height: 44px;
+            margin: 0 auto;
+            margin-top: 20px;
+        }
+
+        .search {
+            flex: 1;
+            display: flex;
+            padding: 5px 8px 0 16px;
+            padding-left: 14px;
+        }
+
+        .ara {
+            display: flex;
+            align-items: center;
+            padding-right: 13px;
+            margin-top: -5px;
+        }
+
+        span {
+            display: inline-block;
+            fill: currentColor;
+            height: 24px;
+            line-height: 24px;
+            position: relative;
+            width: 24px;
+            color: #9AA0A6;
+            height: 20px;
+            width: 20px;
+            margin-top: 3px;
+        }
+
+        .input-wrap {
+            display: flex;
+            flex: 1;
+            flex-wrap: wrap;
+        }
+
+        input {
+
+            background-color: transparent;
+            border: none;
+            margin: 0;
+            padding: 0;
+            color: rgba(0, 0, 0, .87);
+            word-wrap: break-word;
+            outline: none;
+            display: flex;
+            flex: 100%;
+            -webkit-tap-highlight-color: transparent;
+            margin-top: -7px;
+        }
+
+        .voice-wrap {
+            display: flex;
+            flex: 0 0 auto;
+            margin-top: -8px;
+            align-items: stretch;
+            flex-direction: row;
+        }
+
+        .voice {
+            flex: 1 0 auto;
+            display: flex;
+            cursor: pointer;
+            align-items: center;
+            border: 0;
+            background: transparent;
+            outline: none;
+            padding: 0 8px;
+            width: 24px;
+            line-height: 44px;
+        }
+
+        .voice-logo {
+            background: url(//web.archive.org/web/20191130234759im_/https://www.gstatic.com/images/branding/googlemic/2x/googlemic_color_24dp.png) 0 0 no-repeat;
+            height: 24px;
+            width: 24px;
+            background-size: 24px;
+            vertical-align: middle;
+        }
+
+        .search-wrap:hover {
+            box-shadow: 0 1px 6px 0 rgba(32, 33, 36, 0.28);
+            border-color: rgba(223, 225, 229, 0);
+        }
+
+        .buttons {
+            text-align: -webkit-center;
+
+        }
+
+        .sear-but {
+            background-image: -webkit-linear-gradient(top, #f5f5f5, #f1f1f1);
+            background-color: #f2f2f2;
+            border: 1px solid #f2f2f2;
+            border-radius: 4px;
+            color: #5F6368;
+            font-family: arial, sans-serif;
+            font-size: 14px;
+            margin: 11px 4px;
+            display: inline-block;
+            padding: 0 16px;
+            line-height: 27px;
+            height: 36px;
+            min-width: 54px;
+            text-align: center;
+            cursor: pointer;
+            margin-top: 20px;
+            user-select: none;
+        }
+
+        .sear-but :hover {
+            box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+            background-image: -webkit-linear-gradient(top, #f8f8f8, #f1f1f1);
+            background-color: #f8f8f8;
+            border: 1px solid #c6c6c6;
+            color: #222;
+        }
+
+        footer {
+            bottom: 0;
+            font-size: 10pt;
+            height: 35px;
+            position: fixed;
+            width: 100%;
+
+        }
+
+        .fbar {
+
+            background: #f2f2f2;
+            height: 40px;
+            min-width: 980px;
+            border-top: 1px solid #e4e4e4;
+
+        }
+    </style>
+
+</head>
+
+<body>
+    <header>
+        <div class="sol">
+            <a href="">About</a>
+            <a href="">Store</a>
+        </div>
+        <div class="sag">
+            <div class="sign-wrap">
+                <div class="sign">
+                    <a class="sign-but" href="">Sign in</a>
+                </div>
+            </div>
+
+            <a class="menu"
+                href="https://web.archive.org/web/20191130234759/https://www.google.com/intl/en/about/products?tab=wh"
+                title="Google apps"></a>
+            <a href="">Images</a>
+            <a href="">Gmail</a>
+        </div>
+    </header>
+    <section class="main">
+        <img src="/img/google-logo.png" alt="google logo">
+        <form action="/web/20191130234759/https://www.google.com/search" id="tsf" method="GET" name="f"
+            onsubmit="return q.value!=''" role="search">
+            <div class="search-wrap">
+                <div class="search">
+                    <div class="ara"><span><svg focusable="false" xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 24 24">
+                                <path
+                                    d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z">
+                                </path>
+
+                            </svg></span>
+                    </div>
+                    <div class="input-wrap">
+                        <input type="text">
+                    </div>
+                    <div class="voice-wrap">
+                        <div class="voice">
+                            <span class="voice-logo"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="buttons">
+                <input type="submit" class="sear-but" value="Google Search">
+                <input type="submit" class="sear-but" value="I'm Feeling Lucky">
+                <div class="buttton" role="button"
+                    style="display: none; font-family: arial, sans-serif; overflow: hidden; text-align: center; z-index: 50; height: 34px; position: absolute; left: 284px; margin: 0px; top: 29px; width: 111px;"
+                    aria-label tabindex="-1">
+                    <div style="left: 0px; position: absolute; right: 0px; white-space: nowrap; top: -24px;">
+
+
+
+                    </div>
+                </div>
+        </form>
+    </section>
+    <footer>
+        <div class="fbar">
+            <div class="fb-sag">
+                <a
+                    href="https://web.archive.org/web/20191130234759/https://www.google.com/preferences?hl=en">Settings</a>
+                <a href="https://web.archive.org/web/20191130234759/https://policies.google.com/terms?fg=1">Terms</a>
+                <a
+                    href="https://web.archive.org/web/20191130234759/https://policies.google.com/privacy?fg=1">Privacy</a>
+            </div>
+            <div class="fb-sol">
+                <a
+                    href="https://web.archive.org/web/20191130234759/https://www.google.com/intl/en_us/ads/?subid=ww-ww-et-g-awa-a-g_hpafoot1_1!o2&utm_source=google.com&utm_medium=referral&utm_campaign=google_hpafooter&fg=1">Advertising</a>
+                <a
+                    href="https://web.archive.org/web/20191130234759/https://www.google.com/services/?subid=ww-ww-et-g-awa-a-g_hpbfoot1_1!o2&utm_source=google.com&utm_medium=referral&utm_campaign=google_hpbfooter&fg=1">Business</a>
+                <a href="//web.archive.org/web/20191130234759/https://google.com/search/howsearchworks/?fg=1">How Search
+                    works</a>
+            </div>
+        </div>
+    </footer>
+
+
+</body>
+
+</html>
